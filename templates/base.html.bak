@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta charset="utf-8">
+
+		<!-- <link href="../static/css/main.css" rel="stylesheet" type="text/css" /> -->
+
+		<!-- SUPPORT FOR IE6-8 OF HTML5 ELEMENTS -->
+		<!--[if lt IE 9]>
+					<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+
+		<!-- <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}"> -->
+			<title>{% block title %} - SentiKart{% endblock %}</title>
+		{% endblock %}
+	</head>
+	<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+   	  	<!-- Brand and toggle get grouped for better mobile display -->
+          	 <div class="navbar-header">
+    	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				  <span class="sr-only">Toggle navigation</span>
+        		  <span class="icon-bar"></span>
+            	  <span class="icon-bar"></span>
+        		  <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">SentiKart</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/about">About<span class="sr-only">(current)</span></a></li>
+      </ul>
+     </li>
+    </ul>
+   	<div class="dropdown" style="position:relative; top:10px; left:20px">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="	true">
+    Hit it to explore
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="/trend/ASUS ZENFONE 5_OverAll">ASUS ZENFONE 5</a></li>
+    <li><a href="/trend/RED MI 5_OverAll">RED MI 5</a></li>
+    <li><a href="/trend/BOOK_OverAll">BOOK</a></li>
+    <li><a href= "/trend/HP LAPTOP_OverAll">HP LAPTOP</a></li>
+  </ul>
+</div>
+      <ul class="nav navbar-nav navbar-right">
+          <ul class="dropdown-menu">
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</body>
+{% block body %}{% endblock %}
+<body>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+</body>
+
+</html>
